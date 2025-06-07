@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="f">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT-MARKET - Votre Boutique Scolaire en Ligne</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-color: #F0F4F8;
+            background-image: radial-gradient(#dbeafe 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .card-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">
+                Scolia<span class="text-yellow-400">.</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#produits" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Produits</a>
+                <a href="#kits" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Kits de Rentrée</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="relative text-gray-600 hover:text-blue-600 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-yellow-400 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transition-transform">0</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+            <a href="#produits" class="block px-6 py-2 text-gray-600 hover:bg-blue-50">Produits</a>
+            <a href="#kits" class="block px-6 py-2 text-gray-600 hover:bg-blue-50">Kits de Rentrée</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-blue-50">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">La rentrée facile, <br>le succès à portée de main.</h1>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">Toutes les fournitures scolaires dont vos enfants ont besoin, livrées directement à votre porte. Simple, rapide et économique.</p>
+                <a href="#kits" class="mt-8 inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg">Découvrir les kits</a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="produits" class="container mx-auto px-6 py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Incontournables</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="card-item bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x300/E2E8F0/4A5568?text=Cahiers" alt="[Image de cahiers colorés]" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-semibold mb-2">Lot de 5 Cahiers 24x32</h3>
+                        <p class="text-gray-600 text-sm flex-grow">Grands carreaux, 96 pages. Parfait pour toutes les matières.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-600">HTG</span>
+                            <button class="add-to-cart-btn bg-yellow-400 text-white py-2 px-4 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="card-item bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x300/E2E8F0/4A5568?text=Stylos" alt="[Image de stylos de différentes couleurs]" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-semibold mb-2">Set de 10 Stylos Bille</h3>
+                        <p class="text-gray-600 text-sm flex-grow">Couleurs assorties (bleu, noir, rouge, vert). Pointe moyenne.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-600">HTG</span>
+                            <button class="add-to-cart-btn bg-yellow-400 text-white py-2 px-4 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="card-item bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x300/E2E8F0/4A5568?text=Sac+à+Dos" alt="[Image d'un sac à dos robuste]" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-semibold mb-2">Sac à Dos Ergonomique</h3>
+                        <p class="text-gray-600 text-sm flex-grow">Plusieurs compartiments, dos renforcé. Idéal pour le collège.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-600">HTG</span>
+                            <button class="add-to-cart-btn bg-yellow-400 text-white py-2 px-4 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="card-item bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                    <img src="https://placehold.co/400x300/E2E8F0/4A5568?text=Trousse" alt="[Image d'une trousse]" class="w-full h-48 object-cover">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-semibold mb-2">Trousse Double Zip</h3>
+                        <p class="text-gray-600 text-sm flex-grow">Grande capacité, tissu résistant. Disponible en 3 couleurs.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-blue-600">HTG</span>
+                            <button class="add-to-cart-btn bg-yellow-400 text-white py-2 px-4 rounded-full font-semibold hover:bg-yellow-500 transition duration-300">Ajouter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- School Kits Section -->
+        <section id="kits" class="bg-blue-50">
+            <div class="container mx-auto px-6 py-20">
+                <h2 class="text-3xl font-bold text-center mb-4">Simplifiez la rentrée avec nos Kits</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Choisissez le niveau, personnalisez si besoin, et recevez tout en une seule fois. Fini la corvée des courses de rentrée !</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Kit Card 1 -->
+                    <div class="card-item bg-white rounded-lg shadow-lg p-8 text-center border-t-4 border-blue-500">
+                        <h3 class="text-2xl font-bold mb-2">Kit Primaire</h3>
+                        <p class="text-gray-500 mb-4">(CP - CE2)</p>
+                        <p class="text-gray-600 mb-6">L'essentiel pour bien démarrer la grande école : crayons, gommes, cahiers petit format...</p>
+                        <button class="add-to-cart-btn w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Voir le kit</button>
+                    </div>
+                     <!-- Kit Card 2 -->
+                    <div class="card-item bg-white rounded-lg shadow-lg p-8 text-center border-t-4 border-yellow-400">
+                        <h3 class="text-2xl font-bold mb-2">Kit Élémentaire</h3>
+                        <p class="text-gray-500 mb-4">(CM1 - CM2)</p>
+                        <p class="text-gray-600 mb-6">Le matériel adapté pour les plus grands : compas, équerre, cahiers grand format...</p>
+                        <button class="add-to-cart-btn w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Voir le kit</button>
+                    </div>
+                     <!-- Kit Card 3 -->
+                    <div class="card-item bg-white rounded-lg shadow-lg p-8 text-center border-t-4 border-green-500">
+                        <h3 class="text-2xl font-bold mb-2">Kit Collège</h3>
+                        <p class="text-gray-500 mb-4">(6ème - 3ème)</p>
+                        <p class="text-gray-600 mb-6">Tout le nécessaire pour le collège, y compris le matériel de géométrie et de sciences.</p>
+                        <button class="add-to-cart-btn w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">Voir le kit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HT-market.</h3>
+                    <p class="text-gray-400">Votre partenaire pour une rentrée scolaire réussie.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens Utiles</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Livraison & Retours</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Nous Contacter</h3>
+                    <p class="text-gray-400">Email: htmaket163@gmail.com</p>
+                    <p class="text-gray-400">Téléphone: +50932847432</p>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                &copy; 2025 ht-market. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-green-500 text-white py-3 px-5 rounded-lg shadow-xl opacity-0 translate-y-10 transition-all duration-500 ease-out">
+        Article ajouté au panier !
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartCountElement = document.getElementById('cart-count');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const toastElement = document.getElementById('toast');
+            let cartItemCount = 0;
+            
+            // Function to update cart count in the UI
+            const updateCartCount = () => {
+                cartItemCount++;
+                cartCountElement.textContent = cartItemCount;
+                cartCountElement.classList.add('scale-125');
+                setTimeout(() => {
+                    cartCountElement.classList.remove('scale-125');
+                }, 200); // Animation duration
+            };
+            
+            // Function to show a toast notification
+            const showToast = () => {
+                toastElement.classList.remove('opacity-0', 'translate-y-10');
+                toastElement.classList.add('opacity-100', 'translate-y-0');
+                setTimeout(() => {
+                    toastElement.classList.remove('opacity-100', 'translate-y-0');
+                    toastElement.classList.add('opacity-0', 'translate-y-10');
+                }, 2500); // Hide after 2.5 seconds
+            };
+
+            // Add event listeners to all "Add to cart" buttons
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    updateCartCount();
+                    showToast();
+                });
+            });
+
+            // Mobile menu toggle logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
